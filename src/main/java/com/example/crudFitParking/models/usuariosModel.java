@@ -5,16 +5,16 @@ import java.util.Date;
 
 @Entity
 @Table(name="usuarios")
-public class Usuario {  // Nombre de clase en PascalCase
+public class usuariosModel {  
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String nombres;  // Nombre de propiedad en camelCase
+    private String nombres;  
 
     @Column
-    private String apellidos;  // Nombre de propiedad en camelCase
+    private String apellidos;  
 
     @Column(name = "email", unique = true, nullable = false) 
     private String email;
@@ -23,10 +23,10 @@ public class Usuario {  // Nombre de clase en PascalCase
     private String direccion;
 
     @Column
-    private Long telefono;  // Nombre de propiedad en camelCase
+    private Long telefono;  
 
     @Column
-    private Date fechaNacimiento;  // Nombre de propiedad en camelCase
+    private Date fechaNacimiento; 
 
     @Column(name = "documento_id", unique = true, nullable = false)
     private Long documentoId;
