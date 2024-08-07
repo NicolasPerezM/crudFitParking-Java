@@ -28,7 +28,7 @@ public class usuariosModel {
     @Column
     private Date fechaNacimiento; 
 
-    @Column(name = "documento_id", unique = true, nullable = false)
+    @Column
     private Long documentoId;
 
     // Getters y Setters

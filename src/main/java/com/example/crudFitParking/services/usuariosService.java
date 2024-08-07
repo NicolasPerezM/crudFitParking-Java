@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.example.crudFitParking.repositories.IUUsuarios;
 import java.util.List;
 import java.util.Optional;
+import com.example.crudFitParking.models.usuariosModel;
 
 @Service
 public class usuariosService  {
@@ -13,17 +14,17 @@ public class usuariosService  {
     IUUsuarios IUsuarios;
 
     // Create or Update
-    public void saveOrUpdate(com.example.crudFitParking.models.usuariosModel usuarios) {
+    public void saveOrUpdate(usuariosModel usuarios) {
         IUsuarios.save(usuarios);
     }
 
     //Read
-    public List<com.example.crudFitParking.models.usuariosModel> getUsuarios() {
+    public List<usuariosModel> getUsuarios() {
         return IUsuarios.findAll();
     }
 
     //Read by Id
-    public Optional<com.example.crudFitParking.models.usuariosModel> getUsuario(Long id) {
+    public Optional<usuariosModel> getUsuario(Long id) {
        return IUsuarios.findById(id);
     }
 
